@@ -1,0 +1,24 @@
+$logo-width: 100px;
+
+header {
+	box-shadow: 0 0 8px rgba(0, 0, 0, .09);
+	background-color: #fff;
+	padding: 20px;
+	padding-right: $logo-width;
+	display: flex;
+	flex-wrap: nowrap;
+
+	.logo {
+		width: $logo-width;
+		margin-right: 15px;
+		font-size: 30px;
+		text-transform: uppercase;
+	}
+
+	.controls {
+		display: flex;
+		flex-grow: 1;
+		align-items: center;
+		justify-content: center;
+	}
+}

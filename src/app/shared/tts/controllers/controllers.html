@@ -1,0 +1,40 @@
+<div class="controllers">
+	<button
+		*ngIf="isPlaying | async; else elseBlock"
+		class="controller-item run"
+		type="button"
+		(click)="stop()">
+		<i class="fa fa-stop-circle-o"></i>
+	</button>
+	<ng-template #elseBlock>
+		<button
+			class="controller-item run"
+			type="button"
+			[disabled]="!(canPlay | async)"
+			(click)="play()">
+			<i class="fa fa-play-circle"></i>
+		</button>
+	</ng-template>
+
+	<select
+		class="controller-item picker"
+		(change)="changeVoice($event.target.value)">
+
+		<option
+			*ngFor="let voice of voices"
+			[value]="voice">
+			{{voice}}
+		</option>
+	</select>
+
+	<select
+		class="controller-item picker"
+		(change)="changeSpeed($event.target.value)">
+
+		<option
+			*ngFor="let speed of speedList; index as i"
+			[value]="speed">
+			Speed {{i + 1}}
+		</option>
+	</select>
+</div>

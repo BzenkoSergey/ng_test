@@ -1,0 +1,36 @@
+.controllers {
+	display: flex;
+	align-items: center;
+}
+
+.controller-item {
+	margin: 0 5px;
+
+	&.run {
+		background-color: transparent;
+		border: 0;
+		color: #3f82ea;
+		cursor: pointer;
+		font-size: 30px;
+		transition: color .3s;
+		outline: none;
+
+		&:focus,
+		&:hover {
+			color: #1b6be6;
+		}
+
+		&:disabled {
+			color: #b0bbcc;
+		}
+	}
+
+	&.picker {
+		background-color: #fff;
+		border: 1px solid #ced4da;
+		height: 29px;
+		padding: 4px 8px;
+		font-size: 14px;
+		border-radius: 4px;
+	}
+}

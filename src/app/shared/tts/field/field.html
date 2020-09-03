@@ -1,0 +1,13 @@
+<div class="content">
+	<textarea
+		class="field"
+		name="text-to-speech"
+		placeholder="Text to speech"
+		(input)="setValue($event.target.value)"></textarea>
+
+	<div
+		*ngIf="hasNonLatinCharacters"
+		class="message">
+		Please use only latin characters
+	</div>
+</div>
